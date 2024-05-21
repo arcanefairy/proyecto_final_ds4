@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Detalles de Revista{% endblock %}
+{% block head %}
+<style>
+   .espacio {
+    margin-top: 20px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div>
+    <h1 class="espacio">{{ revista.TITULO}}</h1>
+    <p><strong>Factor de Impacto:</strong> {{ revista.FACTOR}}</p>
+    <p><strong>Cuartil:</strong> {{ revista.CUARTIL}}</p>
+    <p><strong>Número de Citas:</strong> {{ revista.CITAS}}</p>
+    <p><strong>Publicado por:</strong> {{ revista.PUBLISHER}}</p>
+    <p><strong>País:</strong> {{ revista.COUNTRY}}</p>
+    <p><strong>Tema(s):</strong> {{ revista.SUBJECT_AREA}}</p>
+    <p><strong>ISSN:</strong> {{ revista.ISSN}}</p>
+    <p><strong>Año:</strong> {{ revista.COVERAGE}}</p>
+</div>
+{% endblock %}

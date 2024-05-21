@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}A&L Searches{% endblock %}
+{% block head %}
+
+{% endblock %}
+{% block body %}
+<div>
+    <body>
+        
+<style>
+    .espacio {
+        margin-bottom: 30px;
+    }
+    .fuente-arial {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+    .absoluto-centro {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 24px;
+    }
+    .texto-negrita {
+        font-weight: bold;
+    }
+    .img-margin-bottom {
+            margin-bottom: 15px;
+        }
+</style>
+
+    <div class="container-fluid espacio">
+        <div class="container">
+            <div class="text-center">
+                <img src="/static/ALS.png" alt="Logo de la página" width="200" class="img-margin-bottom">
+    <h1 class="espacio fuente-arial texto-negrita">A&L Searches</h1>
+    <h2 class="fuente-arial">Página de búsqueda de revistas</h2>
+    </div>
+    </div>
+    </div>
+</body>
+</div>
+{% endblock %}
