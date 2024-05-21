@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Explorar catálogos{% endblock %}
+{% block head %}
+<style>
+   .espacio {
+    margin-top: 20px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div>
+    <h1 class="espacio">Catálogos de revistas</h1>
+    <h2 class="espacio">Ordenadas alfabéticamente</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Letra inicial</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for letra, lista_revistas_letra in dicc_alfabetico.items() %}
+            <tr>
+                <td>  
+                    <a href="/explorar/{{ letra }}" class="link-secondary">{{ letra }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for revista in lista_revistas_letra %}
+                            <tr>
+                                <td>
+                                    <a href="/revista/{{ loop.index0 }}" class="link-secondary">{{ revista['TITULO'] }}</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

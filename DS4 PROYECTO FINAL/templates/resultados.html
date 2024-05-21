@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Resultados de búsqueda{% endblock %}
+{% block body %}
+<div>
+    <h1>Resultados de búsqueda</h1>
+    <h2>Resultados para "{{ query }}"</h2>
+    {% if resultados %}
+    <p>Se encontraron {{ resultados|length }} coincidencias para: "{{ query }}"</p>
+    <ul>
+        {% for revista in resultados %}
+        <li>{{ revista['TITULO:'] }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron resultados para "{{ query }}"</p>
+    {% endif %}
+</div>
+{% endblock %}
